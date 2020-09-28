@@ -6,14 +6,22 @@
 
 /*Site Wide*/
 :root {
-  --accent-color: #ec0772;
-  --primary-color: #552d7c;
+  --white: #fff;
+  --davys-grey: #49494A;
+  --sonic-silver: #707172;
+  --black: #000000;
+  --light-gray: #D3D5D7;
+  --1: #9c9da2;
+  --2: #373739;
+  --3: #e0e0df;
+  --4: #a3a4a4;
+  --5: #898a8c;
 }
 * {
   margin: 0;
   padding: 0;
 }
-header {
+.under-construction-landing {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('images/background.jpg');
   height: 100vh;
   background position: center;
@@ -28,30 +36,115 @@ header {
   text-align: center;
   font-family: 'Roboto', sans-serif;
 }
+h1, h2, h3, h4, h5, p{
+  color: var(--2);
+}
 h1{
   font-size: 60px;
-  letter-spacing: 15px;
+  letter-spacing: 10px;
+  padding: 20px;
 }
-hr{
-  width: 50%;
-  margin: 30px auto;
-  border: 1.5px solid #fff;
+h2{
+  font-size: 40px;
+  padding: 20px 0px;
 }
 p{
   font-family: 'Montserrat', sans-serif;
-  font-size: 25px;
+  font-size: 22px;
   margin-bottom: 30px;
 }
-#launch{
-  font-size: 40px;
-  word-spacing: 20px;
-  }
-img{
+.nav-logo{
   width: 200px;
   height: auto;
   position: absolute;
   right: 0;
   top: 5px;
+}
+.footer{
+  width: 100%;
+  padding-bottom: 50px;
+  bottom: 0;
+  position: relative;
+}
+#footer{
+  margin-bottom: 0;
+}
+.container{
+  position: relative;
+  max-width: 1600px;
+  margin: auto;
+}
+.section{
+  padding: 100px 40px;
+  margin: 250px 0px;
+}
+.section-primary{
+  background-color: var(--1);
+  color: var(--3);
+}
+.section-secondary{
+  background-color: var(--white);
+  color: var(--white);
+}
+.quote-block {
+  background-color: var(--2);
+  color: var(--white);
+}
+
+.highlight{
+  border: 1.5px solid var(--5);
+  width: 50%;
+  margin: 30px;
+}
+.left{
+  left: 0;
+}
+.white{
+  color: var(--white);
+}
+.quote-image{
+  width: 50px;
+  height: auto;
+  margin: 20px auto;
+}
+
+/* Flex Box */
+.flex-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.flex-item{
+  margin: 10px;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  background-color: var(--davys-grey);
+}
+
+/* Navigation */
+.nav-bar{
+  width: 100vw;
+  height: 90px;
+  background-color: var(--4);
+}
+.nav-container{
+  display:flex;
+  flex-direction: row;
+}
+.nav-item{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 24px;
+    clear: right;
+    margin: 0 20px;
+    line-height: 90px;
+    text-decoration: none;
+}
+.nav-item:hover {
+  color: var(--2);
+  font-size: 26px;
+  transition: ;
 }
 
 @media screen and (max-width: 700px){
@@ -71,4 +164,5 @@ img{
   }
   
 }
+
 
