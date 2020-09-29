@@ -117,6 +117,11 @@ img{
 border-top: 2px solid #ccc; /* This is the line replacing the hr*/
 padding: 10px 0px;
 }
+
+li{
+  color: pink;
+  list-style-type: decimal;
+}
 .left{
   left: 0;
 }
