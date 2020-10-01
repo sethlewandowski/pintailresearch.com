@@ -20,7 +20,7 @@ console.log(window.screen.width);
   window.addEventListener('scroll', () => {           // when user scrolls, this fires
   let currentPosition = window.pageYOffset; // set currentPosition
   console.log(`cp: ${currentPosition} \n lp: ${lastPosition}`)
-    if (currentPosition > lastPosition) {         // detect if user has scrolled down
+    if (currentPosition > lastPosition) {         // detect if user has scrolled down quite a bit
       nav.style.height = '0';                 // if so, hide entire nav
     } else if (currentPosition < lastPosition) {  // but if user has scrolled up
       nav.style.height = '90px';                     // show nav again
@@ -28,3 +28,24 @@ console.log(window.screen.width);
     lastPosition = currentPosition;               // reset value for 'lastPosition';
 });
 
+let likes = localStorage.getItem('likes');
+
+function like() {
+  let existingLikes = JSON.parse(localStorage.getItem('likes'));
+  if (!existingLikes) {
+    existingLikes = []; // initalize empty array
+  }
+
+  existingLikes.push('x');
+
+  console.log(`currently there are ${existingLikes.length} likes. `)
+  
+  localStorage.setItem('likes', JSON.stringify(existingLikes))
+  /*
+  likes.push('x');
+
+  console.log(`Currently there are {likes.length} likes in the array.`)
+
+  localStorage.setItem('likes', JSON.stringify(likes));
+  */
+}
