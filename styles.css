@@ -191,7 +191,7 @@ li{
   margin: 10px;
   text-align: left;
   flex: 1;
-  min-width: 400px;
+  min-width: 100%;
 
 }
 
