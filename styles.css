@@ -74,7 +74,7 @@ img{
   width: 100%;
 }
 .section-content{
-  max-width: 800px;
+  max-width: 1000px;
   padding: 30px;
   margin: 0 auto;
 }
@@ -185,12 +185,14 @@ li{
 .flex-container{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: space-between;
 }
 .flex-item{
   margin: 10px;
   text-align: left;
+  flex: 1;
+  min-width: 400px;
+
 }
 
 /* Navigation */
@@ -265,7 +267,7 @@ li{
 }
 #mobile-nav-exit-button{
   top: 20px;
-  left: 20px;
+  left: 10px;
   position: absolute;
   line-height: 0;
   padding: 30px;
@@ -274,12 +276,18 @@ li{
 }
 
 /* Contact Us Form */
-.contact-us-form{
+#contact-us-form{
   width: 100%;
   height: 110%;
+  left: 0;
+}
+.freebirdFormviewerViewNavigationPasswordWarning, .freebirdFormviewerViewFooterEmbeddedBackground{
+  display: none;
 }
 
-
+.footer-info a{
+  text-decoration: none;
+}
 /* CSS TRANSITIONS */
 
 @keyframes slideDownOnLoad {
@@ -322,7 +330,7 @@ li{
 }
   #hamburger-button{
     display: flex; 
-    padding-left: 20px;
+    padding-left: 30px;
   }
   #menu {
     height: 0; /* js function changes this value on click */
@@ -348,8 +356,11 @@ li{
     margin: 0;
     padding: 10px 30px 10px 0px;
   }
-  .main{
+  main{
     padding-top: 0;
+  }
+  .section{
+    padding: 100px 0px ; /*too much padding for mobile devices */
   }
   .nav-item{
     padding: 10px;
