@@ -1,5 +1,5 @@
 
-const launchDate = new Date("Oct 15, 2020 00:00:00").getTime();
+const launchDate = new Date("Nov 15, 2020 00:00:00").getTime();
 console.log(launchDate);
 
 const x = setInterval(function() {
