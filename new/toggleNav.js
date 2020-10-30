@@ -2,7 +2,6 @@
 
 // Open/Close Mobile Nav
 function toggleNavigationMenu() { 
-  console.log('clicked');
 	const nav = document.getElementById("menu"); // get hidden nav
   const background = document.getElementsByTagName('main')[0]; // get main part of document
 
@@ -17,14 +16,12 @@ function toggleNavigationMenu() {
 
 let lastPosition = window.pageYOffset; // set init value for scroll top
 const nav = document.getElementById('nav-bar'); // get entire nav component
-console.log(window.screen.width);
 // initialize a threshold for hiding nav
   window.addEventListener('scroll', () => {           // when user scrolls, this fires
   let currentPosition = window.pageYOffset; // set currentPosition
-  console.log(`cp: ${currentPosition} \n lp: ${lastPosition}`)
     if (currentPosition > lastPosition && currentPosition > 40) {         // detect if user has scrolled down quite a bit
       nav.style.height = '0';                 // if so, hide entire nav
-    } else if (currentPosition < lastPosition) {  // but if user has scrolled up
+    } else if (currentPosition < lastPosition -5) {  // but if user has scrolled up
       nav.style.height = '90px';                     // show nav again
     }
     lastPosition = currentPosition;               // reset value for 'lastPosition';

@@ -17,13 +17,11 @@
 }
 body{
   width: 100vw;
+  margin: 0;
+  padding: 0;
 }
 main{
   margin: 0 auto;
-}
-* {
-  margin: 0;
-  padding: 0;
 }
 
 h1, h2, h3, h4, h5{
@@ -39,7 +37,7 @@ h2{
   font-size: 40px;
 }
 h3{
-  font-size: 34px;
+  font-size: 30px;
 }
 p{
   font-family: 'Open Sans', sans-serif;
@@ -96,6 +94,7 @@ p{
 .hidden-on-desktop{
   display: none;
 }
+
 .highlight{
   background-color: var(--1);
   color: var(--white);
@@ -124,7 +123,6 @@ padding: 10px 0px;
 }
 
 li{
-  color: pink;
   list-style-type: decimal;
 }
 
@@ -209,10 +207,9 @@ li{
   -webkit-box-shadow: 0 8px 6px -6px #999;
   -moz-box-shadow: 0 8px 6px -6px #999;
   box-shadow: 0 8px 6px -6px #999;
-
   transition: height .2s ease-out;
   overflow: hidden;
-
+  z-index: 100;
 
 }
 .nav-container{
@@ -289,11 +286,31 @@ li{
 .footer-info a{
   text-decoration: none;
 }
-/* CSS TRANSITIONS */
 
-@keyframes slideDownOnLoad {
+
+
+/* ANIMATIONS */
+.hide-initially{
+  opacity: 0;
+}
+
+.slide-up.animate{
+  animation: 2s ease-in 0s 1 slideUp;
+}
+.slide-right.animate{
+  animation: 1s ease-in 1s 1 slideRight;
+}
+.slide-right-delay.animate{
+  animation: 1s ease-in 2s 1 slideRight;
+  animation-fill-mode: forwards;
+}
+.appear.animate{
+  animation: 2s ease-in 0s 1 appear;
+}
+
+@keyframes slideUp {
   0%{
-    transform: translateY(+25%);
+    transform: translateY(+50%);
     opacity: 0;
   }  100%{
     transform: translateY(0);
@@ -301,23 +318,29 @@ li{
   }
 }
 
-@keyframes slideRightOnLoad {
+@keyframes slideRight {
   0%{
-    transform: translateX(+25%);
+    transform: translateX(-20%);
     opacity: 0;
   }  100%{
     transform: translateX(0);
     opacity: 1;
   }
 }
+@keyframes appear {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity:1;
+  }
+}
 
-.slide-down{
-  animation: .8s ease 0s 1 slideDownOnLoad;
-}
-.slide-right{
-  animation: .8s ease 0s 1 slideRightOnLoad;
-}
 /* ***************** */
+
+
+
+
 
 @media screen and (max-width: 700px){
   img{
