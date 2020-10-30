@@ -326,11 +326,9 @@ padding: 10px 0px;
 @keyframes slideDown {
   0%{
     transform: translateY(-20px);
-    opacity: 0;
   }  100%{
     transform: translateY(0);
     visibility: visible;
-    opacity: 1;
   }
 }
 
@@ -346,11 +344,9 @@ padding: 10px 0px;
 }
 @keyframes appear {
   0%{
-    opacity: 0;
   }
   100%{
     visibility: visible;
-    opacity: 1;
   }
 }
 
