@@ -20,7 +20,6 @@ body{
 }
 main{
   margin: 0 auto;
-  padding-top: 100px;
 }
 * {
   margin: 0;
@@ -47,15 +46,12 @@ p{
   font-size: 20px;
   margin-bottom: 30px;
 }
-img{
-  max-width: 100%;
-  margin: 20px 0px;
-}
+
 .cta-link p{
   display: inline-block;
   text-decoration: none;
   border-bottom: 1px solid;
-  color: var(--2);
+  color: white;
   margin-bottom: 10px;
   font-size: 24px;
 }
@@ -84,6 +80,8 @@ img{
 }
 .landing{
   height: 50vh;
+  top: 90px;
+  position: relative;
 }
 .section-primary * {
   color: white;
@@ -141,6 +139,9 @@ li{
   margin-bottom: 16px;
   height: 1px;
   background-color: white;
+}
+.team-member-headshot{
+  max-width: 400px;
 }
 
 
@@ -300,13 +301,29 @@ li{
   }
 }
 
+@keyframes slideRightOnLoad {
+  0%{
+    transform: translateX(+25%);
+    opacity: 0;
+  }  100%{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 .slide-down{
   animation: .8s ease 0s 1 slideDownOnLoad;
 }
-
+.slide-right{
+  animation: .8s ease 0s 1 slideRightOnLoad;
+}
 /* ***************** */
 
 @media screen and (max-width: 700px){
+  img{
+  max-width: 100%;
+  margin: 20px 0px;
+}
   h1{
   font-size: 40px;
 }
