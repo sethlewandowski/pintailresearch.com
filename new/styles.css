@@ -40,6 +40,9 @@ h2{
 h3{
   font-size: 30px;
 }
+h4{
+  font-size: 25px;
+}
 p, ul{
   font-family: 'Open Sans', sans-serif;
   font-size: 20px;
@@ -187,8 +190,6 @@ padding: 10px 0px;
 .flex-item{
   margin: 10px;
   text-align: left;
-  flex: 1;
-  max-width: 400px;
 }
 
 /* Navigation */
@@ -290,6 +291,7 @@ padding: 10px 0px;
 /* ANIMATIONS */
 .animate-me{
   visibility: hidden;
+  opacity: 0;
 }
 
 .slide-up.animate{
@@ -316,11 +318,11 @@ padding: 10px 0px;
 @keyframes slideUp {
   0%{
     transform: translateY(+20px);
-    opacity: 0;
   }  100%{
     transform: translateY(0);
     visibility: visible;
     opacity: 1;
+
   }
 }
 @keyframes slideDown {
@@ -329,13 +331,14 @@ padding: 10px 0px;
   }  100%{
     transform: translateY(0);
     visibility: visible;
+    opacity: 1;
+
   }
 }
 
 @keyframes slideRight {
   0%{
     transform: translateX(-20px);
-    opacity: 0;
   }  100%{
     transform: translateX(0);
     visibility: visible;
@@ -347,6 +350,7 @@ padding: 10px 0px;
   }
   100%{
     visibility: visible;
+    opacity: 1;
   }
 }
 
@@ -357,13 +361,12 @@ padding: 10px 0px;
 
 
 @media screen and (max-width: 700px){
-  img{
-  max-width: 100%;
-  margin: 20px 0px;
-}
   h1{
   font-size: 40px;
 }
+  .team-member-headshot{
+    width: 80vw;
+  }
   #launch{
     font-size: 20px;
     word-spacing: 10px;
@@ -406,9 +409,7 @@ padding: 10px 0px;
   .flex-container{
     justify-content: left;
   }
-  .flex-item{
-    margin: 0;
-  }
+
   main{
     padding-top: 0;
   }
